@@ -7,6 +7,7 @@ export default function Homepage() {
         <div>
             <div className="homepage">
                 <Directory />
+                
             </div>
         </div>
     )
