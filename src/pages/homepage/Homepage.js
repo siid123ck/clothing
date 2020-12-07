@@ -6,8 +6,8 @@ export default function Homepage() {
     return (
         <div>
             <div className="homepage">
-                <Directory />
-                
+                <Directory />   
+        
             </div>
         </div>
     )

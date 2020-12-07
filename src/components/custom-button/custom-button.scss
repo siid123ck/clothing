@@ -1,0 +1,23 @@
+.form-button{
+    background-color: blue;
+    color: white;
+    height: 4rem;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    animation: all .2s;
+    &:hover{
+        background-color: #2600ff;
+        transform: translateY(2px);
+    }
+
+    &.signInWithGoogle{
+        background-image: linear-gradient(to  right bottom, rgb(38, 139, 16),rgb(38, 139, 156));
+        margin-left: 2rem;
+        &:hover{
+            background-color: rgb(38, 103, 156);
+        }
+    }
+}

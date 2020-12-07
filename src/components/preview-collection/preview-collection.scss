@@ -11,7 +11,7 @@
     grid-gap: 2rem;
     padding: 2rem 0;
     &-item{
-        height: 35rem;
+      height: 35rem;
        display: flex;
        flex-direction: column;
        
@@ -20,6 +20,7 @@
            height: 93%;
            background-size: cover;
            background-position: center;
+           margin-bottom: 5px;
        }
       &-footer{
           height: 2rem;
@@ -28,6 +29,14 @@
           display: flex;
           justify-content: space-between;
           text-transform: uppercase;
+          & .name{
+          
+              width: 90%;
+          } 
+          & .price{
+             
+              width: 10%;
+          } 
       } 
     }
 }

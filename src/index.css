@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 4rem 2rem;
+  padding: 0 2rem;
+  font-size: 1.6rem;
 }
 
 code {
@@ -19,6 +20,5 @@ code {
 
 html{
   box-sizing: border-box;
-  font-size:100%;
   font-size: 62.5%;
 }

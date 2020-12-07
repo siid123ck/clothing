@@ -1,0 +1,55 @@
+.signin{
+  width: 30vw;  
+  margin: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  &>*{
+      margin-bottom: 3rem;
+  }
+  h2{
+   font-size: 2.8rem;
+  }
+  span{
+      line-height: 1.3;
+      font-size: 1.8rem;
+  }
+}
+.form{
+    &-group{
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+    &-input{
+        padding: 1rem .8rem;
+        border: none;
+        width: 80%;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.397);
+        &:focus{
+            border-bottom: 3px solid rgb(30, 128, 0);
+            outline: none;
+            box-shadow: 0 .5rem 1rem rgba(black,  .2);
+            &:invalid{
+                border-bottom: 3px solid red;
+                
+            }
+        }
+        &:placeholder-shown + .form-label{
+            opacity: 0;
+            visibility: hidden;
+            
+        }
+    
+    }
+    &-label{
+        margin: 1rem;
+        display: block;
+    }
+    
+
+}
+#form-check-box{
+    display: inline-block;
+}
