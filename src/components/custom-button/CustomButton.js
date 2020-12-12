@@ -5,4 +5,4 @@ const CustomButton = ({children, isSignInWithGoogle ,...others})=>(
         {children}
     </button>
 )
-export default CustomButton;
+export default CustomButton; 

@@ -13,11 +13,11 @@
     width: 60%;
 }
 .nav-item{
-    &:link, &:visited{
     margin-right: 4rem;
-    text-decoration: none;
     text-transform: uppercase;
     color: #000;  
+    &:link, &:visited{
+    text-decoration: none;
     transition: all .2s; 
     }
     &:hover, &:active{

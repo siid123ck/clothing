@@ -1,5 +1,5 @@
 import React from 'react'
-import PreviewItem from './preview-item/PreviewItem';
+import PreviewItem from '../preview-item/PreviewItem';
 import './preview-collection.scss'
 
  function Previewcollection({title, items}) {
@@ -7,8 +7,8 @@ import './preview-collection.scss'
         <div className="preview-collection">
             <h1 className="title">{title}</h1>
             <div className="preview">
-                {items.map(({id, ...otherProps})=>
-                   <PreviewItem key={id} {...otherProps} />
+                {items.map(({id, ...otherProps})=> 
+                   <PreviewItem key={id} {...otherProps} />                   
                     )}
             </div>
         </div>
