@@ -1,12 +1,32 @@
+
+.animation-header{
+    padding: 0 1.5rem;
+}
 .carousel{
     margin: 3rem 0;
+    width: 100%;
+    position: relative;
     overflow: hidden;
+    &-inner{
+        display: flex;
+        width: 300%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+        transition: all 1s;
+        &-1{
+            transform: translateX(-33.3%);
+        }
+        &-2{
+            transform: translateX(-66.66%);
+        }
+       
+    }
 
     &-item{
         height: 60rem;
         display: grid;
+        width: 33.3%;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;   
+        grid-template-rows: 1fr; 
         & img{
             height: 100%;
             width: 100%;
@@ -68,3 +88,18 @@
     margin-right: 1rem;
 }
 
+.left, .right{
+    position: absolute;
+    top: 50%;
+    font-size: 2.5rem;
+    color: gray;
+    &:hover{
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
+.left{
+    left: 1rem;
+}
+.right{
+    right: 1rem;
+}

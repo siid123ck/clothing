@@ -1,21 +1,21 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom';
 import CustomButton from '../../components/custom-button/CustomButton';
-import { anim_1, anim_2, anim_3, anim_4, anim_5, anim_6 } from '../../components/data/NavigationImg';
 import Special from '../promo-component/Special';
 import "./animation-header.scss";
 
-export default function AnimationHeader() {
+export default function AnimationHeader({anim_header, anim_1, anim_2, anim_3, anim_4, anim_5}) {
+    const [index, setIndex] = useState(0);
     return (
         <div className="animation-header">
           <div className="carousel slide" data-ride="carousel"  >
-              <div className="carousel-inner" role="listbox">
+              <div className={`carousel-inner carousel-inner-${index}`}  role="listbox">
                   <div className="carousel-item carousel-item-1" >
                       <img src={anim_1} className="img-1" alt="anim 1" />
                       <img src={anim_2} className="img-2" alt="anim 1" />
                       <div className="carousel-caption">
                           <Special header="1/2" sub_header="Price"/>
-                          <h2>luxurious brand</h2>
+                          <h2>{anim_header}</h2>
                           <p>dicover the collections  </p>
                           <div className="btn-collection">
                               <Link to="/shop/men">
@@ -61,23 +61,15 @@ export default function AnimationHeader() {
                           </div>
                       </div>
                   </div>
-                  {/* <div className="carousel-item active">
-                      <img src={anim_3} alt="anim 1" />
-                      <img src={anim_4} alt="anim 1" />
-                      <div className="carousel-caption">
-                          <h2>Most popular items of the summer</h2>
-                          <p>Have one of the most luxurious brand jackets</p>
-                      </div>
-                  </div> */}
-                  {/* <div className="carousel-item">
-                      <img src={anim_5} alt="anim 1" />
-                      <img src={anim_6} alt="anim 1" />
-                      <div className="carousel-caption">
-                          <h2>Most popular items of the summer</h2>
-                          <p>Have one of the most luxurious brand jackets</p>
-                      </div>
-                  </div> */}
               </div>
+                  <div className="navigator" >
+                      <div className="left" onClick={()=>index===0?setIndex(2):setIndex(index-1)}>
+                      <i className="fa fa-chevron-left" aria-hidden="true"></i>
+                      </div>
+                      <div className="right" onClick={()=>index===2?setIndex(0):setIndex(index+1)}>
+                      <i className="fa fa-chevron-right" aria-hidden="true"></i>
+                      </div>
+                  </div>                
           </div>
         </div>
     )
