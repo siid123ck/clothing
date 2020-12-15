@@ -9,7 +9,7 @@ const SHOP_DATA = [
           name: 'Brown ges',
           imgUrl:'https://images.pexels.com/photos/3226446/pexels-photo-3226446.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
           price: 250
-        },
+        }, 
         {
           id: 2,
           name: 'Grey sim',
