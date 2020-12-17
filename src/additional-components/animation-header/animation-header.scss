@@ -11,12 +11,13 @@
         display: flex;
         width: 300%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+        border-top: 1px solid rgba(0, 0, 0, 0.171);
         transition: all 1s;
         &-1{
-            transform: translateX(-33.3%);
+            transform: translateX(-33.333333%);
         }
         &-2{
-            transform: translateX(-66.66%);
+            transform: translateX(-66.666666%);
         }
        
     }
@@ -24,14 +25,16 @@
     &-item{
         height: 60rem;
         display: grid;
-        width: 33.3%;
+        width: 33.33333%;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr; 
+        overflow: hidden;
         & img{
             height: 100%;
             width: 100%;
             background-size: cover;
             background-position: center;
+            overflow: hidden;
             &.img-1{ 
                 grid-column: 1/span 1;
             }
@@ -102,4 +105,20 @@
 }
 .right{
     right: 1rem;
+}
+
+//modifiers
+.direction{
+ &-top{
+    line-height: 1;
+    transform: translateY(-13%);
+    }
+ &-right{
+    grid-column: 2/span 2;
+ }   
+
+}
+
+.text-white{
+    color: white;
 }

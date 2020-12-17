@@ -11,8 +11,8 @@ export default function AnimationHeader({anim_header, ...others}) {
           <div className="carousel slide" data-ride="carousel"  >
               <div className={`carousel-inner carousel-inner-${index}`}  role="listbox">
                   <div className="carousel-item carousel-item-1" >
-                      <img src={others.anim_1} className="img-1" alt="anim 1"/>
-                      <img src={others.anim_2} className="img-2" alt="anim 1" />
+                      <img src={others.images[0]} className="img-1" alt="anim 1"/>
+                      <img src={others.images[1]} className="img-2" alt="anim 1" />
                       <div className="carousel-caption">
                           <Special header={others.special_head[0]} sub_header={others.special_text[0]}/>
                           <h2>{anim_header[0]}</h2>
@@ -28,12 +28,12 @@ export default function AnimationHeader({anim_header, ...others}) {
                       </div>
                   </div>
                   <div className="carousel-item carousel-item-2" style={{
-                      backgroundImage:`url(${others.anim_3})`,
+                      backgroundImage:`url(${others.images[2]})`,
                       backgroundSize:'cover',
                       backgroundPosition:'top',
                      
                       }}>
-                      <div className="carousel-caption carousel-caption-2"> 
+                      <div className={`carousel-caption carousel-caption-2 ${others.direction?others.direction:''}`} > 
                           <Special header={others.special_head[1]} sub_header={others.special_text[1]}/>
                            <h2>{anim_header[1]}</h2>
                           <p>{others.text[1]} </p>
@@ -45,8 +45,8 @@ export default function AnimationHeader({anim_header, ...others}) {
                       </div>
                   </div>
                   <div className="carousel-item carousel-item-3" >
-                      <img src={others.anim_4} className="img-1" alt="anim 1" />
-                      <img src={others.anim_5} className="img-2" alt="anim 1" />
+                      <img src={others.images[3]} className="img-1" alt="anim 1" />
+                      <img src={others.images[4]} className="img-2" alt="anim 1" />
                       <div className="carousel-caption">
                           <Special white header={others.special_head[2]} sub_header={others.special_text[2]}/>
                           <h2>{anim_header[2]}</h2>

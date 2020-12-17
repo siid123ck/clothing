@@ -1,0 +1,71 @@
+.card{
+    background-color: slateblue;
+    height: 20rem;  
+    position: relative;
+}
+.animation{
+       &-item{
+       display: flex;
+       color: black;
+       width: 400%;  
+       height: 100%;      
+       &-1{
+           transform: translateX(-25%);
+       } 
+       &-2{
+           transform: translateX(-50%);
+       } 
+       &-3{
+           transform: translateX(-75%);
+       } 
+        &-img{
+            flex: 1;
+            text-align: center;
+            vertical-align: middle;
+            
+    
+        }
+        &-left, &-right{
+            position: absolute;
+            top: 50%;
+            font-size: 2.5rem;
+            color: gray;
+            &:hover{
+                color: rgba(0, 0, 0, 0.6);
+            } 
+        }
+        &-left{
+            left: 1rem;
+        }
+        &-right{
+            right: 1rem;
+        }
+
+    }
+}
+.card{
+.card-side{
+    width: 100%;
+    background-color: yellow;
+    backface-visibility: hidden;
+    overflow: hidden;
+    position: absolute;  
+    top: 0;
+    left: 0; 
+    height: 100%;
+    transition: all .5s;
+    &-front{
+        background-color: salmon;
+    }
+    &-back{
+        background-color: slateblue;
+        transform: rotateY(180deg);
+    }
+}
+&:hover &-side-front{
+    transform: rotateY(-180deg);
+}
+&:hover &-side-back{
+    transform: rotateY(0);
+}
+}
