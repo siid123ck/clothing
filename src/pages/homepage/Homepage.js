@@ -3,7 +3,6 @@ import AnimationHeader from '../../additional-components/animation-header/Animat
 import Directory from '../../components/directory/Directory'
 import './homepage.styles.scss';
 import {ANIM_HEADER} from '../../components/data/AnimationData';
-import AnimationItem from '../../additional-components/animation-item/AnimationItem';
 
 const anim_data= ANIM_HEADER.filter(el=>el.title==='home')[0].data[0];
 
@@ -17,10 +16,10 @@ export default function Homepage() {
                 <AnimationHeader anim_header={anim_data.header} text={anim_data.text}
                 special_head={anim_data.special_head} special_text={anim_data.special_text}
                 images={anim_data.img}  />
-                <AnimationItem/>
+                
                 <div className="homepage-header">
                  <h1>luxurious Store</h1>
-                <h3>Most luxurious Brand in the world</h3>
+                 <h3>Most luxurious Brand in the world</h3>
                 </div>
                 <Directory />          
             </div>

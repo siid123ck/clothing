@@ -1,8 +1,4 @@
-.card{
-    background-color: slateblue;
-    height: 20rem;  
-    position: relative;
-}
+
 .animation{
        &-item{
        display: flex;
@@ -21,9 +17,15 @@
         &-img{
             flex: 1;
             text-align: center;
-            vertical-align: middle;
-            
-    
+            vertical-align: middle;  
+            background-position: center;
+            background-size: cover; 
+            & img{
+                width: 30rem;
+                height: 100%;
+
+            }
+          
         }
         &-left, &-right{
             position: absolute;
@@ -39,33 +41,26 @@
         }
         &-right{
             right: 1rem;
+            &-small{
+                transform: scale(.65);
+                color: white;
+            }
         }
 
     }
 }
-.card{
-.card-side{
-    width: 100%;
-    background-color: yellow;
-    backface-visibility: hidden;
-    overflow: hidden;
-    position: absolute;  
-    top: 0;
-    left: 0; 
-    height: 100%;
-    transition: all .5s;
-    &-front{
-        background-color: salmon;
+.shop-button{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-style: 2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 1rem 2rem;
+    &:hover{
+        background-color: rgba(128, 128, 128, 0.472);
     }
-    &-back{
-        background-color: slateblue;
-        transform: rotateY(180deg);
-    }
-}
-&:hover &-side-front{
-    transform: rotateY(-180deg);
-}
-&:hover &-side-back{
-    transform: rotateY(0);
-}
 }
