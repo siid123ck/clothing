@@ -2,8 +2,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 7rem;
+    height: 10vh;
     padding: 0 2rem 2rem 0;
+    position: fixed;
+    background-color: white;
+    z-index: 344;
 }
 .nav{
     display: flex;
@@ -31,6 +34,11 @@
 
 }
 .logo-container{
-    padding: 3rem;
     width: 40%;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    & img{
+        height: 5rem;
+        width: 10rem;
+    }
 }

@@ -14,9 +14,7 @@ import Women from './components/section-page/women/Women';
 
 
 class App extends React.Component {
-  state = {
-    currentUser:null
-  }
+
   unSubscribeFromAuth = null;
   componentDidMount() {
     this.unSubscribeFromAuth= auth.onAuthStateChanged(user=>{
@@ -33,7 +31,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <Header currentUser={this.state.currentUser}/>
+        <Header/>
         <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/shop" component={ShopPage} />
